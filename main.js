@@ -11,3 +11,4 @@ function displayTasks() {
   console.log("-----------------------");
 }
 export { addTask, getTasks, displayTasks };
+console.log("Esta es una característica 'publicada' con un error potencial.");

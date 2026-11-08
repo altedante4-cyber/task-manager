@@ -9,4 +9,14 @@ function getTasks() {
   return tasks;
 }
 
-export { addTask, getTasks };
+function deleteTask(id) {
+  const index = tasks.findIndex(task => task.id === id);
+  if (index > -1) {
+    tasks.splice(index, 1);
+    console.log(`Tarea con ID ${id} eliminada.`);
+  } else {
+    console.log(`Tarea con ID ${id} no encontrada.`);
+  }
+}
+
+export { addTask, getTasks, deleteTask, displayTasks };
